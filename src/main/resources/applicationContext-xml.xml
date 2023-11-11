@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean name="custDbRepo" class="cf.mindaugas._2_spring_xml.repository.CustomerDatabaseRepository" />-->
+    <bean name="custFileRepo" class="cf.mindaugas._2_spring_xml.repository.CustomerFileRepository" />
+
+    <!--Setter injection -->
+    <!--We describe this as: "wiring beans by name using setter injection" -->
+<!--    <bean name="customerService" class="cf.mindaugas._2_spring_xml.service.CustomerService">-->
+<!--        <property name="customerRepository" ref="custFileRepo"/>-->
+<!--    </bean>-->
+
+    <!--Constructor injection-->
+<!--    <bean name="customerService" class="cf.mindaugas._2_spring_xml.service.CustomerService">-->
+<!--        <constructor-arg index="0" ref="custFileRepo"/>-->
+<!--    </bean>-->
+
+    <!--Constructor Autowiring-->
+    <bean name="customerService" class="cf.mindaugas._2_spring_xml.service.CustomerService" autowire="constructor" />
+</beans>
