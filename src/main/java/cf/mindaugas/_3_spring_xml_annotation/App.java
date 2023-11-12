@@ -1,5 +1,6 @@
 package cf.mindaugas._3_spring_xml_annotation;
 
+import cf.mindaugas._3_spring_xml_annotation.repository.CustomerFileRepository;
 import cf.mindaugas._3_spring_xml_annotation.service.CustomerService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
